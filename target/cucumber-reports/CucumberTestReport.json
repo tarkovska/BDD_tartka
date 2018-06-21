@@ -1,0 +1,80 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Search",
+        "description": "",
+        "id": "search;search",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7605736191,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on the \"Company home\" page on URL \"http://tartka.com.ua/en/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Company home",
+                  "offset": 13
+                },
+                {
+                  "val": "http://tartka.com.ua/en/",
+                  "offset": 40
+                }
+              ],
+              "location": "StepDefinitions.i_am_on_the_page_on_URL(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7199926566,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I fill in with \"soutage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "soutage",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.i_fill_in_with(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8547137,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I am on the \"http://tartka.com.ua/?s\u003dsoutage\u0026post_type\u003dproduct\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://tartka.com.ua/?s\u003dsoutage\u0026post_type\u003dproduct",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinitions.i_should_see_the_button(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search",
+    "description": "As a user\r\nI want to search\r\nSo that I find soutage",
+    "id": "search",
+    "keyword": "Feature",
+    "uri": "Search.feature"
+  }
+]
