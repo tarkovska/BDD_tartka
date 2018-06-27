@@ -6,13 +6,13 @@
         "line": 6,
         "name": "Search",
         "description": "",
-        "id": "search;search",
+        "id": "buy;search",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 7605736191,
+              "duration": 7121152301,
               "status": "passed"
             },
             "line": 7,
@@ -34,7 +34,7 @@
           },
           {
             "result": {
-              "duration": 7199926566,
+              "duration": 5677263625,
               "status": "passed"
             },
             "line": 8,
@@ -52,7 +52,229 @@
           },
           {
             "result": {
-              "duration": 8547137,
+              "duration": 9615925,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I am on the \"http://tartka.com.ua/?s\u003dsoutage\u0026post_type\u003dproduct\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://tartka.com.ua/?s\u003dsoutage\u0026post_type\u003dproduct",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinitions.i_should_see_the_button(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2812581860,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on the first product",
+            "match": {
+              "location": "StepDefinitions.i_click_on_first_product()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2690316620,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I put it to cart",
+            "match": {
+              "location": "StepDefinitions.i_put_it_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2733172883,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I go to my cart",
+            "match": {
+              "location": "StepDefinitions.i_go_to_cart()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2878944751,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I proceed to checkout",
+            "match": {
+              "location": "StepDefinitions.i_proceed_to_checkout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 318576976,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Fill customer\u0027s name \"Ivan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ivan",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.fill_customer_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 273018291,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Fill customer\u0027s surname \"Ivanov\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ivanov",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.fill_customer_surname(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 269446310,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Fill customer\u0027s email \"ivanov@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ivanov@gmail.com",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.fill_customer_email(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 266779043,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Fill customer\u0027s phone \"0504545458\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0504545458",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.fill_customer_phone(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34395042,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Click terms",
+            "match": {
+              "location": "StepDefinitions.click_terms()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5429305991,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I checkout",
+            "match": {
+              "location": "StepDefinitions.i_checkout()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Buy",
+    "description": "As a user\r\nI want to buy soutage product\r\nSo that I find soutage category and choose from list of products",
+    "id": "buy",
+    "keyword": "Feature",
+    "uri": "Buy.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Search",
+        "description": "",
+        "id": "search;search",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6662396995,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on the \"Company home\" page on URL \"http://tartka.com.ua/en/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Company home",
+                  "offset": 13
+                },
+                {
+                  "val": "http://tartka.com.ua/en/",
+                  "offset": 40
+                }
+              ],
+              "location": "StepDefinitions.i_am_on_the_page_on_URL(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5349033765,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I fill in with \"soutage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "soutage",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.i_fill_in_with(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3879061,
               "status": "passed"
             },
             "line": 9,
