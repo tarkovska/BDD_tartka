@@ -93,7 +93,7 @@ formatter.match({
   "location": "StepDefinitions.i_am_on_the_page_on_URL(String,String)"
 });
 formatter.result({
-  "duration": 7348940410,
+  "duration": 7121152301,
   "status": "passed"
 });
 formatter.match({
@@ -106,7 +106,7 @@ formatter.match({
   "location": "StepDefinitions.i_fill_in_with(String)"
 });
 formatter.result({
-  "duration": 5071992445,
+  "duration": 5677263625,
   "status": "passed"
 });
 formatter.match({
@@ -119,35 +119,35 @@ formatter.match({
   "location": "StepDefinitions.i_should_see_the_button(String)"
 });
 formatter.result({
-  "duration": 9025798,
+  "duration": 9615925,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.i_click_on_first_product()"
 });
 formatter.result({
-  "duration": 3320617572,
+  "duration": 2812581860,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.i_put_it_to_cart()"
 });
 formatter.result({
-  "duration": 2663852671,
+  "duration": 2690316620,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.i_go_to_cart()"
 });
 formatter.result({
-  "duration": 2443102682,
+  "duration": 2733172883,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.i_proceed_to_checkout()"
 });
 formatter.result({
-  "duration": 2715676716,
+  "duration": 2878944751,
   "status": "passed"
 });
 formatter.match({
@@ -160,7 +160,7 @@ formatter.match({
   "location": "StepDefinitions.fill_customer_name(String)"
 });
 formatter.result({
-  "duration": 333468344,
+  "duration": 318576976,
   "status": "passed"
 });
 formatter.match({
@@ -173,7 +173,7 @@ formatter.match({
   "location": "StepDefinitions.fill_customer_surname(String)"
 });
 formatter.result({
-  "duration": 265622676,
+  "duration": 273018291,
   "status": "passed"
 });
 formatter.match({
@@ -186,7 +186,7 @@ formatter.match({
   "location": "StepDefinitions.fill_customer_email(String)"
 });
 formatter.result({
-  "duration": 275126219,
+  "duration": 269446310,
   "status": "passed"
 });
 formatter.match({
@@ -199,21 +199,21 @@ formatter.match({
   "location": "StepDefinitions.fill_customer_phone(String)"
 });
 formatter.result({
-  "duration": 271959874,
+  "duration": 266779043,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.click_terms()"
 });
 formatter.result({
-  "duration": 29532527,
+  "duration": 34395042,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.i_checkout()"
 });
 formatter.result({
-  "duration": 4704007990,
+  "duration": 5429305991,
   "status": "passed"
 });
 formatter.uri("Search.feature");
@@ -261,7 +261,7 @@ formatter.match({
   "location": "StepDefinitions.i_am_on_the_page_on_URL(String,String)"
 });
 formatter.result({
-  "duration": 7869732735,
+  "duration": 6662396995,
   "status": "passed"
 });
 formatter.match({
@@ -274,7 +274,7 @@ formatter.match({
   "location": "StepDefinitions.i_fill_in_with(String)"
 });
 formatter.result({
-  "duration": 6037470025,
+  "duration": 5349033765,
   "status": "passed"
 });
 formatter.match({
@@ -287,7 +287,7 @@ formatter.match({
   "location": "StepDefinitions.i_should_see_the_button(String)"
 });
 formatter.result({
-  "duration": 11954172,
+  "duration": 3879061,
   "status": "passed"
 });
 });

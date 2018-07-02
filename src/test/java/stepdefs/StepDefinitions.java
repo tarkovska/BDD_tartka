@@ -1,14 +1,23 @@
 package stepdefs;
 
+import static org.junit.Assert.assertTrue;
+
 import cucumber.api.java.en.And;
+import org.junit.Test;
+
+import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import pageobjects.*;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class StepDefinitions {
@@ -25,77 +34,83 @@ public class StepDefinitions {
 
     @When("^I fill in with \"([^\"]*)\"$")
     public void i_fill_in_with(String arg2) throws Throwable {
-        HomePage homePage = new HomePage(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        homePage.search(arg2);
+        WebElement search = driver.findElement(By.xpath("//div[@class = 'form-search-right']/input[@type = 'text']"));
+        search.click();
+        search.sendKeys(arg2);
+        WebElement searchFinish = driver.findElement(By.xpath("//div[@class = 'search-view-more']/a[@href = 'http://tartka.com.ua?s=soutage&post_type=product']"));
+        searchFinish.click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @Then("^I am on the \"([^\"]*)\" page$")
     public void i_should_see_the_button(String arg1) throws Throwable {
-        ProductsListPage productPage = new ProductsListPage(driver);
-        String searchResult = productPage.getUrl(driver);
+        String searchResult = driver.getCurrentUrl();
         Assert.assertEquals(arg1, searchResult);
-
     }
 
     @And("^I click on the first product$")
     public void i_click_on_first_product() throws Throwable {
-        ProductsListPage productsListPage = new ProductsListPage(driver);
-        productsListPage.clickElement();
+        List<WebElement> searchList = driver.findElements(By.xpath("//div[@class = 'product-info']/h3[@class = 'product-name p-font']/a"));
+        searchList.get(0).click();
     }
 
     @And("^I put it to cart$")
     public void i_put_it_to_cart() throws Throwable {
-        ProductPage productPage = new ProductPage(driver);
-        productPage.clickAddToCart();
+        WebElement addToCart = driver.findElement(By.name("add-to-cart"));
+        addToCart.click();
     }
     @Then("^I go to my cart$")
     public void i_go_to_cart() throws Throwable {
-        ProductPage productPage = new ProductPage(driver);
-        productPage.clickGoToCart();
+        WebElement goToCart = driver.findElement(By.xpath("//div[@class = 'woocommerce-message']/a[@href = 'http://tartka.com.ua/en/cart-2/']"));
+        goToCart.click();
     }
 
     @Then("^I proceed to checkout$")
     public void i_proceed_to_checkout() throws Throwable {
-        CartViewPage cartViewPage = new CartViewPage(driver);
-        cartViewPage.clickOrder();
+        WebElement order = driver.findElement(By.xpath("//table[@class = 'shop_table shop_table_responsive cart woocommerce-cart-form__contents']/tbody/tr[2]/td/a"));
+        order.click();
     }
 
     @And("^Fill customer's name \"([^\"]*)\"$")
     public void fill_customer_name(String arg1) throws Throwable {
-        OrderPage orderPage = new OrderPage(driver);
-        orderPage.fillFieldName(arg1);
+        WebElement name = driver.findElement(By.id("billing_first_name"));
+        name.click();
+        name.sendKeys(arg1);
     }
     @And("^Fill customer's surname \"([^\"]*)\"$")
     public void fill_customer_surname(String arg1) throws Throwable {
-        OrderPage orderPage = new OrderPage(driver);
-        orderPage.fillFieldSurname(arg1);
+        WebElement surname = driver.findElement(By.id("billing_last_name"));
+        surname.click();
+        surname.sendKeys(arg1);
     }
 
     @And("^Fill customer's email \"([^\"]*)\"$")
     public void fill_customer_email(String arg1) throws Throwable {
-        OrderPage orderPage = new OrderPage(driver);
-        orderPage.fillFieldEmail(arg1);
+        WebElement email = driver.findElement(By.id("billing_email"));
+        email.click();
+        email.sendKeys(arg1);
     }
 
     @And("^Fill customer's phone \"([^\"]*)\"$")
     public void fill_customer_phone(String arg1) throws Throwable {
-        OrderPage orderPage = new OrderPage(driver);
-        orderPage.fillFieldPhone(arg1);
+        WebElement phone = driver.findElement(By.id("billing_phone"));
+        phone.click();
+        phone.sendKeys(arg1);
     }
 
     @And("^Click terms$")
     public void click_terms() throws Throwable {
-        OrderPage orderPage = new OrderPage(driver);
-        orderPage.clickTerms();
+        WebElement terms = driver.findElement(By.id("terms"));
+        terms.sendKeys(Keys.SPACE);
     }
 
     @Then("^I checkout$")
     public void i_checkout() throws Throwable {
-        OrderPage orderPage = new OrderPage(driver);
-        orderPage.clickPlaceOrder();
-        CheckInPage checkInPage = new CheckInPage(driver);
+        WebElement placeOrder = driver.findElement(By.id("place_order"));
+        placeOrder.sendKeys(Keys.ENTER);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Assert.assertEquals(checkInPage.getNotification(), "Thank you. Your order has been received.");
+        WebElement notification = driver.findElement(By.xpath("//div[@class='woocommerce-order']/p"));
+        Assert.assertEquals(notification.getText(), "Thank you. Your order has been received.");
     }
 }
